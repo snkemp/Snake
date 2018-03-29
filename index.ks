@@ -14,7 +14,7 @@ head {
     script: "three.js"
     script: "RequestAnimationFrame.js"
     script: "CameraControl.js"
-    script: "OrbitControl.js"
+    script: "OrbitControls.js"
 
     script: "Apple.js"
     script: "Snake.js"
