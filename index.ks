@@ -9,8 +9,9 @@ head {
 
     style: "index.css"
 
-    script: "three.js"
     script: "dat.gui.js"
+    
+    script: "three.js"
     script: "RequestAnimationFrame.js"
     script: "CameraControl.js"
     script: "OrbitControl.js"
