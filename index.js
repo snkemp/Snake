@@ -4,5 +4,5 @@
 **/
 
 function onload() {
-    alert("Welcome to snake");
+
 }
