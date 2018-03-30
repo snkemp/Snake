@@ -41,7 +41,7 @@ function onload() {
 function run() {
 
     control.update();
-    if( animating ) {
+    if( uniforms.animating ) {
         //TODO
 
     }
