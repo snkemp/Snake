@@ -61,7 +61,7 @@ function onload() {
     back.position.set(0,0,0);
     scene.add(back);
 
-    camera.position.set(0, 0, 100);
+    camera.position.set(0, 0, -100);
 
     run();
 }
