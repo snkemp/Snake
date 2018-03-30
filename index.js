@@ -34,5 +34,18 @@ function onload() {
     for( let attr in uniforms )
         gui.add( uniforms, attr ).onChange( v => uniforms[attr] = v );
 
-    console.log( gui);
+
+    run();
+}
+
+function run() {
+
+    controls.update();
+    if( animating ) {
+        //TODO
+
+    }
+
+    renderer.renderScene( scene, camera );
+    requestAnimationFrame( run );
 }
