@@ -51,7 +51,7 @@ function onload() {
 
     // Draw a backdrop
     var back, backGeom, backMatl;
-    backGeom = new THREE.PlaneGeometry( 200, 200, 1, 1 );
+    backGeom = new THREE.PlaneGeometry( 200, 200, 64, 64 );
     backMatl = new THREE.MeshBasicMaterial({
         color: 0xFFFF00,
         side: THREE.DoubleSide
@@ -61,7 +61,7 @@ function onload() {
     back.position.set(0,0,0);
     scene.add(back);
 
-    camera.position.set(0, 0, 0 );
+    camera.position.set(0, 1, 0);
 
     run();
 }
