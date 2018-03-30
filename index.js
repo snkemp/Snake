@@ -32,7 +32,7 @@ function onload() {
         animating: true
     };
     for( let attr in uniforms )
-        gui.add( uniforms[attr], attr ).onChange( v => uniforms[attr] = v );
+        gui.add( uniforms, attr ).onChange( v => uniforms[attr] = v );
 
     console.log( gui);
 }
