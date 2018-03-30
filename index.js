@@ -3,7 +3,7 @@
  * snkemp
 **/
 
-var container, renderer, scene, camera, control, animating, gui;
+var container, renderer, scene, camera, control, gui, uniforms;
 
 function onload() {
 
@@ -28,4 +28,10 @@ function onload() {
 
 
     gui = new dat.GUI();
+    uniforms = {
+        animating: true
+    };
+    for( let attr in uniforms )
+        gui.add( uniforms[attr], attr ).onChange( v => uniforms[attr] = v );
+
 }
