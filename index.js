@@ -52,12 +52,13 @@ function onload() {
     // Draw a backdrop
     var back, backGeom, backMatl;
     backGeom = new THREE.PlaneGeometry( 200, 200, 1, 1 );
-    backMatl = new THREE.MeshDepthMaterial({
-        color: 0xFFFFFF,
+    backMatl = new THREE.MeshBasicMaterial({
+        color: 0xFFFF00,
         side: THREE.DoubleSide
     });
     back = new THREE.Mesh( backGeom, backMatl );
     //back.rotation.set();
+    back.position.set(0,0,0);
     scene.add(back);
 
     camera.position.set(0, 50, -100 );
