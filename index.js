@@ -26,7 +26,7 @@ function onload() {
     window.addEventListener( 'resize', function() {
         camera.aspect = window.innerWidth/window.innerHeight;
         camera.updateProjectionMatrix();
-        renderer.setSize( window.innerWidth/window.innerHeight );
+        renderer.setSize( window.innerWidth, window.innerHeight );
     }, false );
 
 
@@ -40,8 +40,8 @@ function onload() {
         gui.add( uniforms, attr ).onChange( v => uniforms[attr] = v );
 
     /* Snakes and whatnot */
-    snake = new Snake();
-    apple = new Apple();
+    //snake = new Snake();
+    //apple = new Apple();
 
     /* Create a world */
 
@@ -51,7 +51,7 @@ function onload() {
 
     // Draw a backdrop
     var backGeom, backMatl;
-    backGeom = new THREE.BoxGeometry( 1,1,1 );
+    backGeom = new THREE.BoxGeometry( 50, 50, 50 );
     backMatl = new THREE.MeshBasicMaterial({
         color: 0xffffff,
         side: THREE.DoubleSide
