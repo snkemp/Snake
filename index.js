@@ -45,21 +45,18 @@ function onload() {
     /* Create a world */
 
     // First some light
-    var amb = new THREE.AmbientLight( 0xcccccc );
+    var amb = new THREE.AmbientLight( 0x808080 );
     scene.add(amb);
-
-    var dir = new THREE.DirectionalLight( 0xffddee );
-    scene.add(dir);
 
     // Draw a backdrop
     var back, backGeom, backMatl;
-    backGeom = new THREE.PlaneGeometry( 200, 200, 64, 64 );
+    backGeom = new THREE.PlaneGeometry( 200, 200, 5, 5 );
     backMatl = new THREE.MeshBasicMaterial({
-        color: 0xfefafd,
+        color: 0xffffff,
         side: THREE.DoubleSide
     });
     back = new THREE.Mesh( backGeom, backMatl );
-    back.rotation.set(0,0,0);
+    back.rotation.set(-Math.PI/2,0, Math.PI/2);
     back.position.set(0,0,0);
     scene.add(back);
 
