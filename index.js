@@ -34,4 +34,5 @@ function onload() {
     for( let attr in uniforms )
         gui.add( uniforms[attr], attr ).onChange( v => uniforms[attr] = v );
 
+    console.log( gui);
 }
