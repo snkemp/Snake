@@ -52,7 +52,7 @@ function onload() {
     var back, backGeom, backMatl;
     backGeom = new THREE.PlaneGeometry( 200, 200, 1, 1 );
     backMatl = new THREE.MeshDepthMaterial({
-        color: 0x212121,
+        color: 0xFFFFFF,
         side: THREE.DoubleSide
     });
     back = new THREE.Mesh( backGeom, backMatl );
@@ -68,6 +68,7 @@ function run() {
 
     control.update();
     if( uniforms.animating ) {
+        console.log( camera.position );
     }
 
     renderer.render( scene, camera );
