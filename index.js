@@ -55,7 +55,7 @@ function onload() {
         color: 0x212121,
         side: THREE.DoubleSide
     });
-    back = new THREE.Mesh( floorGeom, floorMatl );
+    back = new THREE.Mesh( backGeom, backMatl );
     //back.rotation.set();
 
     camera.position.set(0, 50, -100 );
