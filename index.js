@@ -40,7 +40,7 @@ function onload() {
 
 function run() {
 
-    controls.update();
+    control.update();
     if( animating ) {
         //TODO
 
