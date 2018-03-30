@@ -16,7 +16,7 @@ function onload() {
     renderer.setSize( window.offsetWidth, window.offsetHeight );
     container.appendChild( renderer.domElement );
 
-    camera = new THREE.PerspectiveCamera( 45, window.innerWidth/window.innerHeight, 1, 1000 );
+    camera = new THREE.PerspectiveCamera( 45, window.innerWidth/window.innerHeight, .01, 1000 );
     scene = new THREE.Scene();
     scene.add(camera);
 
@@ -51,13 +51,13 @@ function onload() {
 
     // Draw a backdrop
     var backGeom, backMatl;
-    backGeom = new THREE.PlaneGeometry( 200, 200, 5, 5 );
+    backGeom = new THREE.PlaneGeometry( 50, 50, 5, 5 );
     backMatl = new THREE.MeshBasicMaterial({
         color: 0xffffff,
         side: THREE.DoubleSide
     });
     back = new THREE.Mesh( backGeom, backMatl );
-    back.rotation.set(-Math.PI/2,0, Math.PI/2);
+    back.rotation.set(0,0,0);
     back.position.set(0,0,0);
     scene.add(back);
 
@@ -71,8 +71,8 @@ function run() {
     control.update();
     if( uniforms.animating ) {
         uniforms.time += .01;
-        console.log(uniforms);
-        back.rotation.set( Math.PI*2*Math.sin(uniforms.time), Math.PI*2*Math.cos(uniforms.time), 0 );
+        cube.rotation.x = time;
+        cube.rotation.z = time;
     }
 
     renderer.render( scene, camera );
