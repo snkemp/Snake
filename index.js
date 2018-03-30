@@ -51,7 +51,7 @@ function onload() {
     // Draw a backdrop
     var back, backGeom, backMatl;
     backGeom = new THREE.PlaneGeometry( 200, 200, 1, 1 );
-    backMatl = new MeshDepthMaterial({
+    backMatl = new THREE.MeshDepthMaterial({
         color: 0x212121,
         side: THREE.DoubleSide
     });
