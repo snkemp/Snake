@@ -5,6 +5,8 @@
 
 var container, renderer, scene, camera, control, gui, uniforms;
 
+var snake, apple;
+
 function onload() {
 
     /* Needed components */
@@ -20,6 +22,7 @@ function onload() {
 
     control = new THREE.OrbitControls( camera, document, renderer.domElement );
 
+    /* Resize function */
     window.addEventListener( 'resize', function() {
         camera.aspect = window.innerWidth/window.innerHeight;
         camera.updateProjectionMatrix();
@@ -27,6 +30,7 @@ function onload() {
     }, false );
 
 
+    /* Use customization */
     gui = new dat.GUI();
     uniforms = {
         'animating': true
@@ -34,7 +38,27 @@ function onload() {
     for( let attr in uniforms )
         gui.add( uniforms, attr ).onChange( v => uniforms[attr] = v );
 
+    /* Snakes and whatnot */
+    snake = new Snake();
+    apple = new Apple();
 
+    /* Create a world */
+
+    // First some light
+    var amb = new THREE.AmbientLight( 0x404040 );
+
+
+    // Draw a backdrop
+    var back, backGeom, backMatl;
+    backGeom = new THREE.PlaneGeometry( 200, 200, 1, 1 );
+    backMatl = new MeshDepthMaterial({
+        color: 0x212121,
+        side: THREE.DoubleSide
+    });
+    back = new THREE.Mesh( floorGeom, floorMatl );
+    //back.rotation.set();
+
+    camera.position.set(0, 50, -100 );
 
     run();
 }
