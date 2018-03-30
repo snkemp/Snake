@@ -51,7 +51,7 @@ function onload() {
 
     // Draw a backdrop
     var backGeom, backMatl;
-    backGeom = new THREE.BoxGeometry( 50, 50, 50 );
+    backGeom = new THREE.PlaneGeometry( 20, 20, 1, 1 );
     backMatl = new THREE.MeshBasicMaterial({
         color: 0xffffff,
         side: THREE.DoubleSide
