@@ -70,7 +70,7 @@ function run() {
 
     control.update();
     if( uniforms.animating ) {
-        console.log( camera.position );
+        console.log( scene );
     }
 
     renderer.render( scene, camera );
