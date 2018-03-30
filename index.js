@@ -29,7 +29,7 @@ function onload() {
 
     gui = new dat.GUI();
     uniforms = {
-        animating: true
+        'animating': true
     };
     for( let attr in uniforms )
         gui.add( uniforms, attr ).onChange( v => uniforms[attr] = v );
