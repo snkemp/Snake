@@ -46,6 +46,6 @@ function run() {
 
     }
 
-    renderer.renderScene( scene, camera );
+    renderer.render( scene, camera );
     requestAnimationFrame( run );
 }
