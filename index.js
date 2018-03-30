@@ -71,6 +71,7 @@ function run() {
     control.update();
     if( uniforms.animating ) {
         uniforms.time += .01;
+        console.log(uniforms);
         back.rotation.set( Math.PI*2*Math.sin(uniforms.time), Math.PI*2*Math.cos(uniforms.time), 0 );
     }
 
