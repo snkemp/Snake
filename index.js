@@ -57,6 +57,7 @@ function onload() {
     });
     back = new THREE.Mesh( backGeom, backMatl );
     //back.rotation.set();
+    scene.add(back);
 
     camera.position.set(0, 50, -100 );
 
@@ -67,7 +68,6 @@ function run() {
 
     control.update();
     if( uniforms.animating ) {
-        console.log( "ANIMATING" );
     }
 
     renderer.render( scene, camera );
