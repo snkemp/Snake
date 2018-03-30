@@ -5,7 +5,7 @@
 
 var container, renderer, scene, camera, control, gui, uniforms;
 
-var snake, apple;
+var snake, apple, back;
 
 function onload() {
 
@@ -33,7 +33,8 @@ function onload() {
     /* Use customization */
     gui = new dat.GUI();
     uniforms = {
-        'animating': true
+        'animating': true,
+        'time': 0;
     };
     for( let attr in uniforms )
         gui.add( uniforms, attr ).onChange( v => uniforms[attr] = v );
@@ -49,7 +50,7 @@ function onload() {
     scene.add(amb);
 
     // Draw a backdrop
-    var back, backGeom, backMatl;
+    var backGeom, backMatl;
     backGeom = new THREE.PlaneGeometry( 200, 200, 5, 5 );
     backMatl = new THREE.MeshBasicMaterial({
         color: 0xffffff,
@@ -69,7 +70,8 @@ function run() {
 
     control.update();
     if( uniforms.animating ) {
-
+        uniforms.time += .01;
+        back.rotation.set( Math.PI*2*Math.sin(uniforms.time), Math.PI*2*Math.cos(uniforms.time), 0 );
     }
 
     renderer.render( scene, camera );
