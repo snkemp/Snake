@@ -16,7 +16,7 @@ function onload() {
     renderer.setSize( window.offsetWidth, window.offsetHeight );
     container.appendChild( renderer.domElement );
 
-    camera = new THREE.PerspectiveCamera( 50, window.innerWidth/window.innerHeight, 1, 10000 );
+    camera = new THREE.PerspectiveCamera( 45, window.innerWidth/window.innerHeight, 1, 1000 );
     scene = new THREE.Scene();
     scene.add(camera);
 
@@ -57,7 +57,7 @@ function onload() {
         side: THREE.DoubleSide
     });
     back = new THREE.Mesh( backGeom, backMatl );
-    //back.rotation.set();
+    back.rotation.set(0,0,0);
     back.position.set(0,0,0);
     scene.add(back);
 
