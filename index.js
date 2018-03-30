@@ -72,7 +72,7 @@ function run() {
 
     control.update();
     if( uniforms.animating ) {
-        console.log( scene );
+
     }
 
     renderer.render( scene, camera );
