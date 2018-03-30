@@ -71,8 +71,8 @@ function run() {
     control.update();
     if( uniforms.animating ) {
         uniforms.time += .01;
-        cube.rotation.x = time;
-        cube.rotation.z = time;
+        back.rotation.x = time;
+        back.rotation.z = time;
     }
 
     renderer.render( scene, camera );
