@@ -46,6 +46,7 @@ function onload() {
 
     // First some light
     var amb = new THREE.AmbientLight( 0x404040 );
+    scene.add(amb);
 
 
     // Draw a backdrop
