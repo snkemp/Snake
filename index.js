@@ -35,6 +35,7 @@ function onload() {
         gui.add( uniforms, attr ).onChange( v => uniforms[attr] = v );
 
 
+
     run();
 }
 
@@ -42,8 +43,7 @@ function run() {
 
     control.update();
     if( uniforms.animating ) {
-        //TODO
-
+        console.log( "ANIMATING" );
     }
 
     renderer.render( scene, camera );
