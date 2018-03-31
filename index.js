@@ -23,11 +23,12 @@ function onload() {
     control = new THREE.OrbitControls( camera, document, renderer.domElement );
 
     /* Resize function */
-    window.addEventListener( 'resize', function() {
+    function resize() {
         camera.aspect = window.innerWidth/window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize( window.innerWidth, window.innerHeight );
-    }, false );
+    }
+    window.addEventListener( 'resize', resize, false );
 
 
     /* Use customization */
