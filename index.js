@@ -29,6 +29,7 @@ function onload() {
         renderer.setSize( window.innerWidth, window.innerHeight );
     }
     window.addEventListener( 'resize', resize, false );
+    resize();
 
 
     /* Use customization */
